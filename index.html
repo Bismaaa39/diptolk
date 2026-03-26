@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>diptolk ceunah</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+/* === CSS KAMU (TIDAK DIUBAH) === */
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;
+    width:300%;height:100%;
+    background:url('images/20260321_141535.jpg'),
+               url('images/20260321_141545.jpg'),
+               url('images/20260321_143750.jpg');
+    background-size:contain;
+    background-repeat:repeat-x;
+    filter:grayscale(100%) blur(6px);
+    animation:scrollBg 40s linear infinite;
+    z-index:-1;
+}
+
+@keyframes scrollBg {
+    from {transform:translateX(0);}
+    to {transform:translateX(-50%);}
+}
+
+body {
+    color:#fff;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    min-height:100vh;
+    text-align:center;
+    overflow-y:auto;
+}
+
+.container {
+    max-width:700px;
+    padding:30px;
+    margin:40px 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {font-size:2.5rem;margin-bottom:10px;}
+p {opacity:.8;margin-bottom:20px;}
+
+.countdown {font-size:1.6rem;margin-top:20px;letter-spacing:2px;}
+
+.highlight {
+    background:linear-gradient(45deg,#a855f7,#ff6ec7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-weight:bold;
+}
+
+.hidden {display:none;}
+
+.fade-in {animation:fadeIn 1.5s ease forwards;}
+
+@keyframes fadeIn {
+    from {opacity:0;transform:translateY(20px);}
+    to {opacity:1;transform:translateY(0);}
+}
+
+.box {
+    background:rgba(0,0,0,0.4);
+    border-radius:15px;
+    padding:20px;
+    margin:15px 0;
+    backdrop-filter:blur(10px);
+    text-align:left;
+}
+
+ul {padding-left:20px;}
+li {margin:8px 0;}
+
+canvas {
+    position:fixed;
+    top:0;left:0;
+    pointer-events:none;
+}
+
+textarea {
+    width:100%;
+    margin-top:10px;
+    border-radius:10px;
+    padding:10px;
+    border:none;
+    resize:none;
+}
+
+button {
+    margin-top:10px;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#ff9ecb;
+    color:#000;
+    cursor:pointer;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<canvas id="confetti"></canvas>
+
+<div class="container">
+
+<div id="locked">
+    <h1>Pertanyaan diptolk</h1>
+    <p>Pertanyaan bakal kebuka:</p>
+    <p><b>30 Maret 2026, 00:00</b></p>
+    <div class="countdown" id="countdown"></div>
+</div>
+
+<div id="content" class="hidden">
+
+    <h1 class="fade-in">Pertanyaan diptolk</h1>
+
+    <div class="box fade-in">
+        <h2>Pertanyaan Binyu</h2>
+        <ul>
+    <li>Gimana perasaan Pupu akhir-akhir inii, ngerasa apa gitu sama orang cool ini?</li>
+    <li>Hal apa yang paling Pupu suka (bebas apapun kalo bisa tentang Binyuk sama kita)</li>
+    <li>Apakah ada hal kecil yang sebenernya Pupu pengen rasain tapi belum sempet ngasih tau ke Binyu?</li>
+    <li>Kalo liat ke depan, Pupu ngebayangin apa tentang kita?</li>
+    <li>Pupu maunya kaya gimana tentang hubungan kita?</li>
+    <li>Apa yang Pupu harapkan dari Binyu?</li>
+    <li>Kalo misalnya ga lolos SNBP atau SNBT, kita gimana?</li>
+    <li>Kalo misal ada yang belum lolos, menurut pendapat masing-masing gimana?</li>
+    <li>Kalo gap year, kita bakal gimana?</li>
+    <li>Suatu hal apa yang menurut Pupu penting biar kita tetep bisa jalan dan baik baik aja walau mungkin kondisi akan berubah?</li>
+    <li>Hal apa yang Pupu butuhin tapi belum Binyu kasih?</li>
+    <li>Menurut Pupu, Binyu harus lebih baik di bagian apa?</li>
+    <li>Apa yang Pupu rasa dihargai sama Pupu? (PFFT)</li>
+    <li>Walau Binyu orang cooooooooooooool, pernah bikin Pupu sakit hati ga yang Binyu sadar dan tidak sadari? kalo pernah ceritain dong, biar Binyu bisa evaluasi dan lebih baik lagi!</li>
+    <li>Hal apa yang Binyu harus hindari biar Pupu ga ngerasa sakit hati</li>
+    <li>Kalo Pupu jujur, apa yang perlu Binyu perbaiki atau rubah?</li>
+    <li>Apa yang bisa Binyu lakuin biar kita bisa lebih baik lagi?</li>
+    <li>Menurut Pupu dan Binyu, hubungan sehat kaya gimana?</li>
+    <li>Apa yang harus Pupu dan Binyu jaga bareng-bareng untuk ke depannya?</li>
+    <li>Kalo nanti ada masalah, yang mungkin SUPER BESARRRRRRRRRRRRRRR, pendapat Pupu dan Binyu maunya nyelesain kaya gimana?</li>
+</ul>
+    </div>
+
+    <div class="box fade-in">
+        <h2>Pertanyaan Pupu</h2>
+
+        <p style="font-size:0.9rem; opacity:0.7;">
+            Pupu boleh nulis pertanyaannya di bawah, kalo pun gak nulis it's okeee, pake pertanyaan aku aja, tapi lebih bagus Pupu juga ngasih pertanyaan ok?!!!!!
+        </p>
+
+        <textarea id="inputPertanyaan" placeholder="Tulis pertanyaan Princess di sini..."></textarea>
+        <button onclick="simpanPertanyaan()">Kirim ke Binyukkk</button>
+    </div>
+
+
+</div>
+</div>
+
+<script>
+
+// ================= CONFIG (WAJIB GANTI) =================
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdGsFq-PsRVO-5RX_pjvWwi1uAwzuHs_HCnAxpUDb3589jmqg/formResponse";
+const GOOGLE_SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQlAQM4FFu-PcIAdzQz0tWAKxsxxVTEXt-azkD5tzj9UAEVmHpShrxH5R7aoOJBAV67aeBuxQfiLBFO/pub?output=csv";
+const ENTRY_ID = "entry.510900142";
+
+// ================= COUNTDOWN =================
+const unlockDate = new Date("March 30, 2026 00:00:00").getTime();
+const countdownEl = document.getElementById("countdown");
+const locked = document.getElementById("locked");
+const content = document.getElementById("content");
+
+const interval = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = unlockDate - now;
+
+    if (distance <= 0) {
+        clearInterval(interval);
+        locked.classList.add("hidden");
+        content.classList.remove("hidden");
+        startConfetti();
+        return;
+    }
+
+    const d = Math.floor(distance/(1000*60*60*24));
+    const h = Math.floor((distance/(1000*60*60))%24);
+    const m = Math.floor((distance/(1000*60))%60);
+    const s = Math.floor((distance/1000)%60);
+
+    let text = `${d}d ${h}h ${m}m ${s}s`;
+     text = text.replace(/39|26/g, match => `<span class="highlight">${match}</span>`);
+    countdownEl.innerHTML = text;
+
+},1000);
+
+// ================= KIRIM KE GOOGLE FORM =================
+function kirimKeGoogleForms(text){
+    let formData = new FormData();
+    formData.append(ENTRY_ID, text);
+
+    fetch(GOOGLE_FORM_URL,{
+        method:"POST",
+        body:formData,
+        mode:"no-cors"
+    });
+}
+
+// ================= SIMPAN =================
+function simpanPertanyaan(){
+    const inputEl = document.getElementById("inputPertanyaan");
+    const button = document.querySelector("button");
+    const input = inputEl.value.trim();
+
+    if(!input){
+        alert("Bengong lu?");
+        return;
+    }
+
+    button.disabled = true;
+    button.innerText = "Mengirim...";
+
+    try{
+        kirimKeGoogleForms(input);
+
+        // reset
+        inputEl.value = "";
+
+        alert("YEAYYYY KESIMPEN, TERIMA KASIH BANYAK PRINCESS");
+
+    }catch(err){
+        alert("PFFFFFFFFTTTTTTTTTTTT GAGAL!!! :( coba lagi ya!");
+        console.log(err);
+    }
+
+    // aktifkan lagi tombol
+    button.disabled = false;
+    button.innerText = "Simpan";
+}
+
+// ================= CONFETTI =================
+const canvas=document.getElementById("confetti");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let pieces=[];
+
+function startConfetti(){
+    for(let i=0;i<150;i++){
+        pieces.push({
+            x:Math.random()*canvas.width,
+            y:Math.random()*canvas.height,
+            size:Math.random()*5+2,
+            speed:Math.random()*3+1
+        });
+    }
+    animateConfetti();
+}
+
+function animateConfetti(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    pieces.forEach(p=>{
+        ctx.fillStyle="pink";
+        ctx.fillRect(p.x,p.y,p.size,p.size);
+        p.y+=p.speed;
+        if(p.y>canvas.height) p.y=0;
+    });
+
+    requestAnimationFrame(animateConfetti);
+}
+
+</script>
+
+</body>
+</html>
